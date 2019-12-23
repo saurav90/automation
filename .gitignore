@@ -4,3 +4,6 @@
 /vendor/*
 /web/bundles/
 /app/config/parameters.yml
+/storage
+.idea/*
+.env
