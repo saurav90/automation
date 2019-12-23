@@ -1,9 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.login')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="{{ url('/') }}"><b>Automation</b>{{ __('Reset Password') }}</a>
+        </div>
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
@@ -41,7 +42,6 @@
                     </form>
                 </div>
             </div>
-        </div>
+
     </div>
-</div>
 @endsection
