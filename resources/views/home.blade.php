@@ -22,7 +22,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="create-suit">Create test suit</a>
                 </div>
             </div>
         </div>
