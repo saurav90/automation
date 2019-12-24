@@ -9,16 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel')}}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- jQuery -->
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-    <!-- Bootstrap 4 -->
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('dist/js/demo.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,28 +33,34 @@
     <!-- Top navigation -->
     @include('layouts.nav-top');
     <!-- Top navigation -->
-
     <!-- Left navigation -->
     @include('layouts.left-menu');
     <!-- Left navigation -->
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         @yield('content')
     </div>
     <!-- /.content-wrapper -->
-
     <!-- Left navigation -->
     @include('layouts.footer');
     <!-- Left navigation -->
-
     <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
+    {{--<aside class="control-sidebar control-sidebar-dark">--}}
+        {{--<!-- Control sidebar content goes here -->--}}
+    {{--</aside>--}}
     <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+<!-- Scripts -->
+{{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
+<!-- jQuery -->
+<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('dist/js/demo.js') }}"></script>
 
 </body>
 </html>
