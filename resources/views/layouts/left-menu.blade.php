@@ -27,7 +27,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="{{url('/dashboard')}}" class="nav-link">
+                    <a href="{{url('/dashboard')}}" class="nav-link {{(last(request()->segments()) == "dashboard")|| (last(request()->segments()) == "")? "active":""}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -64,8 +64,8 @@
                         {{--</p>--}}
                     {{--</a>--}}
                 {{--</li>--}}
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview {{(last(request()->segments()) == "view-suite-model" || last(request()->segments()) == "create-suite-model")? "menu-open":""}}">
+                    <a href="#" class="nav-link {{(last(request()->segments()) == "view-suite-model" || last(request()->segments()) == "create-suite-model")? "active":""}}">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                              Test Suite Model Master
@@ -75,23 +75,23 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('/create-suite-model') }}" class="nav-link {{(last(request()->segments()) == "create-suite-model")? "active":""}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add New Suite Model</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('/view-suite-model') }}" class="nav-link {{(last(request()->segments()) == "view-suite-model")? "active":""}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Modify Suite Model</p>
+                                <p>View Suite Models</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="../layout/fixed-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Delete Suite Model</p>
-                            </a>
-                        </li>
+                        {{--<li class="nav-item">--}}
+                            {{--<a href="{{ url('/delete-suit-model') }}" class="nav-link">--}}
+                                {{--<i class="far fa-circle nav-icon"></i>--}}
+                                {{--<p>Delete Suite Model</p>--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
                         {{--<li class="nav-item">--}}
                             {{--<a href="../layout/fixed-topnav.html" class="nav-link">--}}
                                 {{--<i class="far fa-circle nav-icon"></i>--}}
@@ -112,31 +112,25 @@
                         {{--</li>--}}
                     </ul>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview {{(last(request()->segments()) == "view-suites" || last(request()->segments()) == "create-suite")? "menu-open":""}}">
+                    <a href="#" class="nav-link  {{(last(request()->segments()) == "view-suites" || last(request()->segments()) == "create-suite")? "active":"" }}">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Test Suite Master
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item ">
+                            <a href="{{  url('/create-suite') }}" class="nav-link {{(last(request()->segments()) == "create-suite")? "active":""}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add New Test Suite</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{  url('/view-suites') }}" class="nav-link {{ (last(request()->segments()) == "view-suites")? "active":"" }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Modify Test Suite</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Delete Test Suite</p>
+                                <p>View Suites</p>
                             </a>
                         </li>
                     </ul>

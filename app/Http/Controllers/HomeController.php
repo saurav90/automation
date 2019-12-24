@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $viewData = ['title' => "Home"];
+        return view('home',compact('viewData'));
     }
 }

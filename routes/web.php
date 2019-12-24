@@ -10,12 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/create-suit', 'SuitController');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index');
+Route::resource('/create-suite-model', 'SuiteController');
+Route::get('/view-suite-model', 'SuiteController@suiteModelList');
+Route::get('/create-suite', 'SuiteController@createSuite');
+Route::get('/view-suites', 'SuiteController@suiteList');
+

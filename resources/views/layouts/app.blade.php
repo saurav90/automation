@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel')}}</title>
+    <title>{{ config('app.name', 'Laravel')}}{{ '-'. $viewData['title'] }}</title>
 
 
     <!-- Fonts -->
@@ -31,18 +31,19 @@
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- Top navigation -->
-    @include('layouts.nav-top');
+    @include('layouts.nav-top')
     <!-- Top navigation -->
     <!-- Left navigation -->
-    @include('layouts.left-menu');
+    @include('layouts.left-menu')
     <!-- Left navigation -->
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        @include('layouts.breadcrumb')
         @yield('content')
     </div>
     <!-- /.content-wrapper -->
     <!-- Left navigation -->
-    @include('layouts.footer');
+    @include('layouts.footer')
     <!-- Left navigation -->
     <!-- Control Sidebar -->
     {{--<aside class="control-sidebar control-sidebar-dark">--}}
