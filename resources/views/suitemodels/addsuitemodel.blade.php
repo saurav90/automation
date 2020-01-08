@@ -20,37 +20,24 @@
                                     <input type="suitname" class="form-control" id="suitname" placeholder="Suit Name">
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-block btn btn-info">Add Suit Coloumns </button>
+                                    <button type="button" class="btn btn-block btn btn-info" onclick="appendThing()">Add Suit Coloumns </button>
                                 </div>
                                 <div  id="sortable">
                                     <div class="row field-box fieldSort">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Coloumn Name</label>
+                                                <label for="exampleInputEmail1" class="col">Coloumn Name 1</label>
                                                 <input type="text" class="form-control Cname" id="Cname[0]" placeholder="Coloumn Name" name="Cname[0]">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Coloumn Description</label>
+                                                <label for="exampleInputEmail1" class="desc">Coloumn Description 1</label>
                                                 <input type="text" class="form-control Cdesc" id="Cdesc[0]" placeholder="Coloumn Description" name="Cdesc[0]">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row field-box fieldSort">
-                                        <div class="col-sm-6 ">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Coloumn Name</label>
-                                                <input type="text" class="form-control" id="Cname[1]" placeholder="Coloumn Name" name="Cname[1]">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Coloumn Description</label>
-                                                <input type="text" class="form-control" id="Cdesc[1]" placeholder="Coloumn Description" name="Cdesc[1]">
-                                            </div>
-                                        </div>
-                                    </div>
+
 
                                 </div>
                             </div>
