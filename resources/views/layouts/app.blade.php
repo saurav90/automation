@@ -16,6 +16,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -56,6 +60,9 @@
 {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
 <!-- jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
